@@ -1,0 +1,11 @@
+FROM jenkins/jenkins:lts
+
+USER root
+
+# Install Node.js and npm
+RUN curl -sL https://deb.nodesource.com/setup_20.x | bash -
+RUN apt-get install -y nodejs
+
+# You can install other necessary dependencies here
+
+USER jenkins
