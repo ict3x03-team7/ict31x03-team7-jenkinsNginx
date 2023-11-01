@@ -20,19 +20,6 @@ services:
     networks:
       - reverse-proxy
 
-  sonarqube:
-    image: sonarqube:latest
-    container_name: sonarqube
-    ports:
-      - "8888:9000"
-    networks:
-      - reverse-proxy
-    volumes:
-      - sonarqube_data:/opt/sonarqube/data
-      - sonarqube_extensions:/opt/sonarqube/extensions
-      - sonarqube_logs:/opt/sonarqube/logs
-      - sonarqube_conf:/opt/sonarqube/conf
-
 networks:
   reverse-proxy:
     driver: bridge
